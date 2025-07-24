@@ -40,11 +40,15 @@ This extension currently does not expose any settings.
 
 ## 📘 Release Notes
 
-### 1.0.0
+### 0.0.1
 
 * Initial release
 * Integrated WebAssembly backend for log filtering
 * Added UI prompt for filter string
+
+### 0.0.2
+
+* Updated Rust wasm placement
 
 ---
 
