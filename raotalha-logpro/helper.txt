@@ -1,0 +1,8 @@
+npm run build
+// either login form terminal or go to your account created on marketplace of visual studio
+vsce login <publisher-name>
+
+vsce package
+
+// either publish (if you are logged in) or drag and drop the packge on publisher account
+vsce publish
