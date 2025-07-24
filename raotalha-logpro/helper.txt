@@ -6,3 +6,7 @@ vsce package
 
 // either publish (if you are logged in) or drag and drop the packge on publisher account
 vsce publish
+
+// Test the release localy
+code --install-extension raotalha-logpro-0.0.1.vsix
+code --uninstall-extension RaoTalha.raotalha-logpro

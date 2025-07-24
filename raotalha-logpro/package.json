@@ -2,7 +2,12 @@
   "name": "raotalha-logpro",
   "displayName": "logpro",
   "description": "It helps you filter the log",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "publisher": "RaoTalha",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuhammadTalhaRao/logpro"
+  },
   "engines": {
     "vscode": "^1.102.0"
   },

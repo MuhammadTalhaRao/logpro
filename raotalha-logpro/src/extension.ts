@@ -29,7 +29,13 @@ export function activate(context: vscode.ExtensionContext) {
         console.log("📥 Loading WASM module...");
 
         const wasmPath = vscode.Uri.file(
-          path.join(context.extensionPath, "src", "wasm", "logpro_bg.wasm")
+          path.join(
+            context.extensionPath,
+            context.extensionMode === vscode.ExtensionMode.Development
+              ? "src/wasm"
+              : "dist",
+            "logpro_bg.wasm"
+          )
         );
 
         const wasmBytes = await vscode.workspace.fs.readFile(wasmPath);
@@ -53,7 +59,9 @@ export function activate(context: vscode.ExtensionContext) {
         console.log("✅ Filtered log displayed.");
       } catch (err: any) {
         console.error("❌ Error in filterLogs:", err);
-        vscode.window.showErrorMessage(`Error filtering logs: ${err.message || err}`);
+        vscode.window.showErrorMessage(
+          `Error filtering logs: ${err.message || err}`
+        );
       }
     }
   );
